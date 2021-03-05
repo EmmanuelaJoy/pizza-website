@@ -151,6 +151,12 @@ button {
 
 /*end of landing page*/
 
+/*about-us section*/
+#about {
+  padding: 3em;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   #landingPage {
     width: max-content;
