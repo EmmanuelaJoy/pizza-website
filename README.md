@@ -1,14 +1,12 @@
-# Moringa Project 2
+# Moringa Project 4
 
-<h1>Akan Name Generator</h1>
+<h1>Pizza-Palace Website</h1>
 <table>
 <tr>
 <td>
-  <p>This is a webpage that displays an Akan name Generator which functions by calculating the day in a week that someone was born and based on the person's gender outputs their Akan name.</p>
+  <p>This is a webpage that displays the various pizzas offered by Pizza Palace Restaurant.</p>
 
-<p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born.<p>
-
-<p>To discover your Akan name, visit the webpage and enter the required details.</p>
+<p>It allows a user to select as many pizzas as they want with their preferred toppings and offers delivery service to their doorsteps.<p>
 
 </td>
 </tr>
@@ -25,7 +23,7 @@ No set-up instructions at the moment.
 
 ## Demo
 
-Here is a working live demo : https://emmanuelajoy.github.io/akan-name-generator/
+Here is a working live demo :
 
 ### Development
 
