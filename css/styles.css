@@ -72,6 +72,12 @@ html {
   margin: 0;
 }
 
+.fa-moon {
+  font-size: 2rem;
+  color: rgb(219, 175, 63);
+  cursor: pointer;
+}
+
 #hotelName {
   font-size: 30px;
   color: white;
@@ -111,8 +117,45 @@ button {
   background-color: rgb(219, 175, 63);
 }
 
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+}
+
+.image-container #img1 {
+  display: block;
+}
+
+.controls {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  background: rgb(219, 175, 63);
+  margin: 0 1rem;
+}
+
+.dots:hover {
+  background: white;
+}
+
 @media (max-width: 600px) {
-  #home {
+  #landingPage {
     width: max-content;
   }
 }
