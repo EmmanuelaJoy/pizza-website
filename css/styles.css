@@ -10,3 +10,110 @@ html {
 .container-fluid {
   padding: 0;
 }
+
+/*start of landing page*/
+
+#landingPage {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  position: relative;
+  height: 100vh;
+}
+
+/*start of header*/
+#header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-item {
+  margin-right: 3rem;
+}
+
+.nav-item a {
+  color: rgb(219, 175, 63);
+  font-size: 22px;
+}
+
+.nav-item a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+#header .fa-pizza-slice {
+  font-size: 4rem;
+  color: rgb(219, 175, 63);
+  cursor: pointer;
+  display: none;
+}
+
+#hotelName {
+  font-size: 26px;
+  color: red;
+  font-family: "Gill Sans";
+  letter-spacing: 0.5em;
+}
+/*end of header*/
+
+@media (max-width: 1000px) {
+  #header .fa-pizza-slice {
+    display: block;
+  }
+
+  #header nav {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    height: 100vh;
+    width: 35rem;
+    background: #000;
+  }
+
+  .navMenu {
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 4em;
+    height: 75%;
+  }
+
+  .nav-item {
+    margin: 2rem 0;
+  }
+
+  .nav-item a {
+    font-size: 3.5rem;
+    border-radius: 5rem;
+    color: white;
+  }
+
+  .nav-item a:hover {
+    padding: 0.5rem 7.5rem;
+    color: #333;
+    background: rgb(219, 175, 63);
+  }
+
+  #header .nav-toggle {
+    left: 0%;
+  }
+
+  .nav-toggle {
+    left: 0%;
+  }
+
+  #hotelname {
+    letter-spacing: 1em;
+  }
+}
