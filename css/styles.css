@@ -4,6 +4,7 @@
 }
 
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -28,7 +29,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 2rem 4rem;
 }
 
 .navMenu {
@@ -39,12 +40,12 @@ html {
 }
 
 .nav-item {
-  margin-right: 3rem;
+  margin-right: 4rem;
 }
 
 .nav-item a {
   color: rgb(219, 175, 63);
-  font-size: 22px;
+  font-size: 2rem;
 }
 
 .nav-item a:hover {
@@ -53,10 +54,20 @@ html {
 }
 
 #header .fa-pizza-slice {
-  font-size: 4rem;
+  font-size: 5rem;
+  z-index: 10000;
   color: rgb(219, 175, 63);
   cursor: pointer;
   display: none;
+}
+
+#header-active {
+  background: #333;
+  height: 6rem;
+}
+
+#header-active nav ul {
+  margin: 0;
 }
 
 #hotelName {
@@ -84,8 +95,7 @@ html {
   .navMenu {
     flex-flow: column;
     justify-content: center;
-    align-items: flex-start;
-    margin-left: 4em;
+    align-items: center;
     height: 75%;
   }
 
@@ -94,8 +104,8 @@ html {
   }
 
   .nav-item a {
-    font-size: 3.5rem;
-    border-radius: 5rem;
+    font-size: 3rem;
+    border-radius: 3rem;
     color: white;
   }
 
@@ -105,15 +115,14 @@ html {
     background: rgb(219, 175, 63);
   }
 
+  #hotelName {
+    letter-spacing: 1em;
+  }
+
   #header .nav-toggle {
     left: 0%;
   }
-
   .nav-toggle {
     left: 0%;
-  }
-
-  #hotelname {
-    letter-spacing: 1em;
   }
 }
