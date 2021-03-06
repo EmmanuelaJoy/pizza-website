@@ -4,6 +4,11 @@ $(document).ready(function () {
         $('nav').toggleClass('nav-toggle');
     });
 
+    $('nav ul li a').click(function () {
+        $('.fa-pizza-slice').removeClass('fa-times');
+        $('nav').removeClass('nav-toggle');
+    });
+
     $('.dot1').click(function () {
         $('#img1').css('display', 'block');
         $('#img2').css('display', 'none');
@@ -22,10 +27,12 @@ $(document).ready(function () {
         $('#img2').css('display', 'none');
     });
 
-    window.addEventListener('scroll', function () {
-        const header = document.querySelector('header');
-        header.classList.toggle("sticky", window.scroll)
+    $(window).on('scroll load', function () {
+        if ($(window).scrollTop() > 10) {
+            $('#header').addClass('header-active');
+        } else {
+            $('#header').removeClass('header-active');
+        }
     });
-
 
 });
