@@ -3,6 +3,7 @@
   font-family: "Exo 2", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -190,7 +191,8 @@ h3 {
 }
 
 #lady {
-  height: 100vh;
+  margin-top: 3em;
+  height: 80vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -198,13 +200,11 @@ h3 {
 }
 /*end of about us section*/
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   #pizza {
     width: fit-content;
   }
-}
 
-@media (max-width: 1100px) {
   /*start of header media query*/
   #header .fa-pizza-slice {
     display: block;
@@ -258,4 +258,8 @@ h3 {
   }
 
   /*end of header media query*/
+
+  #aboutTitle {
+    margin-top: 8em;
+  }
 }
