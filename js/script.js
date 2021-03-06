@@ -35,4 +35,16 @@ $(document).ready(function () {
         }
     });
 
+    $(".card-img-top").hover(function () {
+        $(this).stop().animate({
+            opacity: .6
+        }, 200);
+        $('.price').css('visibility', 'visible');
+    }, function () {
+        $(this).stop().animate({
+            opacity: 1
+        }, 500);
+        $('.price').css('visibility', 'hidden');
+    });
+
 });
