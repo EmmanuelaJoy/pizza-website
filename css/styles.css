@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Amita:wght@700&family=Monda&family=Paytone+One&display=swap");
 * {
   font-family: "Exo 2", sans-serif;
   margin: 0;
@@ -13,6 +12,12 @@ html {
 
 .container-fluid {
   padding: 0;
+}
+
+p {
+  font-family: "Monda", sans-serif;
+  font-weight: 300px;
+  font-size: 24px;
 }
 
 /*start of landing page*/
@@ -111,6 +116,10 @@ button {
   background-color: rgb(219, 175, 63);
 }
 
+button:hover {
+  letter-spacing: 4px;
+}
+
 .image-container img {
   position: absolute;
   top: 0;
@@ -126,6 +135,14 @@ button {
 
 .image-container #img1 {
   display: block;
+}
+
+.image-container #img2 {
+  display: none;
+}
+
+.image-container #img3 {
+  display: none;
 }
 
 .controls {
@@ -153,13 +170,37 @@ button {
 
 /*about-us section*/
 #about {
-  padding: 3em;
   text-align: center;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
+#aboutTitle {
+  margin-top: 15em;
+  line-height: 2;
+}
+
+h3 {
+  font-size: 5rem;
+  font-family: "Paytone One", sans-serif;
+  color: rgb(219, 175, 63);
+  margin-bottom: 1em;
+}
+
+#lady {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+}
+/*end of about us section*/
+
 @media (max-width: 600px) {
-  #landingPage {
-    width: max-content;
+  #pizza {
+    width: fit-content;
   }
 }
 
