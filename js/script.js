@@ -38,7 +38,7 @@ $(document).ready(function () {
         }
     });
 
-    //a hover function for the menu items
+    /*a hover function for the menu items
     $(".card-img-top").hover(function () {
         $(this).stop().animate({
             opacity: .6
@@ -49,7 +49,7 @@ $(document).ready(function () {
             opacity: 1
         }, 500);
         $('.price').css('visibility', 'hidden');
-    });
+    }); */
 
 
     const themeButton = document.getElementById("theme-button")

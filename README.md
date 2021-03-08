@@ -6,7 +6,7 @@
 <td>
   <p>This is a webpage that displays the various pizzas offered by Pizza Palace Restaurant.</p>
 
-<p>It allows a user to select as many pizzas as they want with their preferred toppings and offers delivery service to their doorsteps.<p>
+<p>It allows a user to order a pizza by selecting the type of pizza, the size of the pizza, the preferred crust and toppings and finally outputs the total cost of selected items.It also allows the user to receive the purshased pizzas either via delivery or pickup at the restaurant</p>
 
 </td>
 </tr>
@@ -23,7 +23,7 @@ No set-up instructions at the moment.
 
 ## Demo
 
-Here is a working live demo :
+Here is a working live demo : https://emmanuelajoy.github.io/pizza-website/
 
 ### Development
 
@@ -50,6 +50,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 - HTML.
 - CSS.
 - Bootstrap framework.
+- jQuery.
 - JavaScript Programming Language.
 
 ## Contact Information
@@ -57,6 +58,6 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 - Email : emmajoy81@gmail.com
 - Phone : +254 725853727
 
-## [License](https://github.com/EmmanuelaJoy/my-portfolio/blob/main/LICENSE)
+## [License](https://github.com/EmmanuelaJoy/pizza-website/blob/main/LICENSE)
 
 MIT © [Emmanuela Joy ](https://github.com/EmmanuelaJoy)
