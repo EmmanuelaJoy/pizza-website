@@ -52,6 +52,11 @@ $(document).ready(function () {
     });
 
 
+    const themeButton = document.getElementById("theme-button")
+    const darkTheme = "dark-theme"
+    themeButton.addEventListener("click", () => {
+        document.body.classList.toggle(darkTheme)
+    })
     /* //declaring an object called pizzasize
      let pizzaSize = {
          small: 850,
