@@ -52,28 +52,61 @@ $(document).ready(function () {
     });
 
 
-    //declaring an object called pizzasize
-    let pizzaSize = {
-        small: 850,
-        medium: 1150,
-        large: 1300
-    }
+    /* //declaring an object called pizzasize
+     let pizzaSize = {
+         small: 850,
+         medium: 1150,
+         large: 1300
+     }
+ 
+     //pizza constructor
+     function Pizza(name, size, crust, toppings) {
+         this.pizzaName = name;
+         this.pizzaSize = size;
+         this.pizzaCrust = crust;
+         this.pizzaToppings = toppings;
+     }
+     var order1 = new Pizza("bbq", "small", "thick", "bacon");
+ 
+     let pizza = {
+         name: [],
+         pizzaSize,
+         crust: [Crispy, Stuffed, Gluten - free],
+         toppings: [Salami, Mushroom, Mozzarella, Onions, Bacon]
+     }*/
 
-    //pizza constructor
+    //business logic
     function Pizza(name, size, crust, toppings) {
         this.pizzaName = name;
         this.pizzaSize = size;
         this.pizzaCrust = crust;
         this.pizzaToppings = toppings;
     }
-    var order1 = new Pizza("bbq", "small", "thick", "bacon");
 
-    /*let pizza = {
-        name: [],
-        pizzaSize,
-        crust: [Crispy, Stuffed, Gluten - free],
-        toppings: [Salami, Mushroom, Mozzarella, Onions, Bacon]
-    }*/
+
+    $("form#orderForm").submit(function (event) {
+        event.preventDefault();
+
+        var inputtedPizzaName = $("input#pizzaName").val();
+        var inputtedPizzaSize = $("input#pizzaSize").val();
+        var inputtedPizzaCrust = $("input#pizzaCrust").val();
+        var inputtedPizzaToppings = $("input#pizzaToppings").val();
+
+        var newOrder = new Order(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaCrust, inputtedPizzaToppings);
+
+        $("ol#contacts").append("<li><span class='contact'>" + newOrder.fullName() + "</span></li>");
+
+        $("input#pizzaName").val("");
+        $("input#new-last-name").val("");
+
+        $(".contact").last().click(function () {
+            $("#show-orders").show();
+            $("#show-orders h4").text(newOrder.pizzaName);
+            $(".first-name").text(newOrder.pizzaSize);
+            $(".last-name").text(newOrder.pizzaCrust);
+        });
+
+    });
 
 
 });
