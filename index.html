@@ -163,12 +163,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="pizzaAmount" class="form-label">How many of these pizzas would you like?</label>
-                            <input type="number" id="pizzaAmount" class="form-control" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="pizzaSize" class="form-label">How about the size?</label><br>
+                            <label for="pizzaSize" class="form-label">Select the sizeof the pizza:</label><br>
                             <select name="pizzaSize" id="pizzaSize" required>
                                 <option value="small" selected>Small</option>
                                 <option value="medium">Medium</option>
@@ -177,14 +172,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="pizzaCrust" class="form-label">Let's not forget about the crust:</label><br>
+                            <label for="pizzaAmount" class="form-label">How many of these pizzas would you like?</label>
+                            <input type="number" id="pizzaAmount" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pizzaCrust" class="form-label">How about the crust?</label><br>
                             <select name="pizzaCrust" id="pizzaCrust" required>
                                 <option value="crispy" selected>Crispy</option>
                                 <option value="stuffed">Stuffed</option>
                                 <option value="gluten-free">Gluten-free</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="pizzaToppings">
                             <label>Why not select some extra toppings while you're at it?</label><br>
                             <input type="checkbox" id="salami" name="salami" value="salami">
                             <label for="salami">Salami</label><br>
@@ -202,16 +202,16 @@
                     </form>
 
                     <h4>My Orders:</h4>
-                    <ol id="orders">
+                    <ul id="orders">
 
-                    </ol>
+                    </ul>
                 </div>
                 <div class="col-md-6">
                     <div id="show-orders">
                         <h4></h4>
 
                         <p>Your Pizza: <span class="pizzaName"></span></p>
-                        <p>The Size: <span class="pizzSize"></span></p>
+                        <p>The Size: <span class="pizzaSize"></span></p>
                         <p>The Crust: <span class="pizzaCrust"></span></p>
                         <p>The Toppings: <span class="pizzaToppings"></span></p>
                         <p>Amount of Pizzas: <span class="pizzAmount"></span></p>

@@ -76,9 +76,10 @@ $(document).ready(function () {
      }*/
 
     //business logic
-    function Pizza(name, size, crust, toppings) {
+    function Pizza(name, size, amount, crust, toppings) {
         this.pizzaName = name;
         this.pizzaSize = size;
+        this.pizzaAmount = amount;
         this.pizzaCrust = crust;
         this.pizzaToppings = toppings;
     }
@@ -89,21 +90,27 @@ $(document).ready(function () {
 
         var inputtedPizzaName = $("input#pizzaName").val();
         var inputtedPizzaSize = $("input#pizzaSize").val();
+        var inputtedPizzaAmount = $("input#pizzaAmount").val();
         var inputtedPizzaCrust = $("input#pizzaCrust").val();
         var inputtedPizzaToppings = $("input#pizzaToppings").val();
 
-        var newOrder = new Order(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaCrust, inputtedPizzaToppings);
+        var newOrder = new Order(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaAmount, inputtedPizzaCrust, inputtedPizzaToppings);
 
-        $("ol#contacts").append("<li><span class='contact'>" + newOrder.fullName() + "</span></li>");
+        $("ul#orders").append("<li><span class='order'>" + newOrder + "</span></li>");
 
         $("input#pizzaName").val("");
-        $("input#new-last-name").val("");
+        $("input#pizzaSize").val("");
+        $("input#pizzaAmount").val("");
+        $("input#pizzaCrust").val("");
+        $("input#pizzaToppings").val("");
 
-        $(".contact").last().click(function () {
+        $(".order").last().click(function () {
             $("#show-orders").show();
             $("#show-orders h4").text(newOrder.pizzaName);
-            $(".first-name").text(newOrder.pizzaSize);
-            $(".last-name").text(newOrder.pizzaCrust);
+            $(".pizzaName").text(newOrder.pizzaName);
+            $(".pizzaSize").text(newOrder.pizzaSize);
+            $(".pizzaCrust").text(newOrder.pizzaCrust);
+            $(".pizzaToppings").text(newOrder.pizzaCrust);
         });
 
     });

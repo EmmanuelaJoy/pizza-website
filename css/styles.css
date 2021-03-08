@@ -284,6 +284,15 @@ h3 {
   display: none;
 }
 
+.order {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.order:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1100px) {
   html {
     font-size: 50%;
