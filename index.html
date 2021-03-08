@@ -152,7 +152,7 @@
                     <form id="orderForm">
                         <div class="form-group">
                             <label for="pizzaName" class="form-label">Select your pizza:</label><br>
-                            <select name="pizzaName" id="pizzaName" required>
+                            <select name="pizzaName" id="pizza-name" required>
                                 <option value="" selected>BBQ Beef</option>
                                 <option value="">Meat Lovers</option>
                                 <option value="">Pepperoni</option>
@@ -164,7 +164,7 @@
 
                         <div class="form-group">
                             <label for="pizzaSize" class="form-label">Select the sizeof the pizza:</label><br>
-                            <select name="pizzaSize" id="pizzaSize" required>
+                            <select name="pizzaSize" id="pizza-size" required>
                                 <option value="small" selected>Small</option>
                                 <option value="medium">Medium</option>
                                 <option value="large">Large</option>
@@ -173,18 +173,18 @@
 
                         <div class="form-group">
                             <label for="pizzaAmount" class="form-label">How many of these pizzas would you like?</label>
-                            <input type="number" id="pizzaAmount" class="form-control" required>
+                            <input type="number" id="pizza-amount" class="form-control" required>
                         </div>
 
                         <div class="form-group">
                             <label for="pizzaCrust" class="form-label">How about the crust?</label><br>
-                            <select name="pizzaCrust" id="pizzaCrust" required>
+                            <select name="pizzaCrust" id="pizza-crust" required>
                                 <option value="crispy" selected>Crispy</option>
                                 <option value="stuffed">Stuffed</option>
                                 <option value="gluten-free">Gluten-free</option>
                             </select>
                         </div>
-                        <div class="form-group" id="pizzaToppings">
+                        <div class="form-group" id="pizza-toppings">
                             <label>Why not select some extra toppings while you're at it?</label><br>
                             <input type="checkbox" id="salami" name="salami" value="salami">
                             <label for="salami">Salami</label><br>
@@ -220,6 +220,28 @@
                 </div>
             </div>
         </div>
+
+        <div id="contact">
+            <div class="row justify-content-md-center" id="contact">
+                <div class="col-md-12" id="card-content">
+                    <h3>CONTACT US</h3>
+                    <div class="form-row" id="contactForm">
+                        <div class="col-md-6">
+                            <input type="name" class="form-control" id="name" placeholder="Name..." required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" id="email" placeholder="Email..." required>
+                        </div>
+                        <textarea class="form-control" id="textArea" rows="5" cols="60"
+                            placeholder="Your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
 
     </div>
 

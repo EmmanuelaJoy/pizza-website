@@ -88,15 +88,15 @@ $(document).ready(function () {
     $("form#orderForm").submit(function (event) {
         event.preventDefault();
 
-        var inputtedPizzaName = $("input#pizzaName").val();
-        var inputtedPizzaSize = $("input#pizzaSize").val();
-        var inputtedPizzaAmount = $("input#pizzaAmount").val();
-        var inputtedPizzaCrust = $("input#pizzaCrust").val();
-        var inputtedPizzaToppings = $("input#pizzaToppings").val();
+        var inputtedPizzaName = $("input#pizza-name").val();
+        var inputtedPizzaSize = $("input#pizza-size").val();
+        var inputtedPizzaAmount = $("input#pizza-amount").val();
+        var inputtedPizzaCrust = $("input#pizza-crust").val();
+        var inputtedPizzaToppings = $("input#pizza-toppings").val();
 
-        var newOrder = new Order(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaAmount, inputtedPizzaCrust, inputtedPizzaToppings);
+        var newOrder = new Pizza(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaAmount, inputtedPizzaCrust, inputtedPizzaToppings);
 
-        $("ul#orders").append("<li><span class='order'>" + newOrder + "</span></li>");
+        $("ul#orders").append("<li><span class='order'>" + newOrder.pizzaName + "</span></li>");
 
         $("input#pizzaName").val("");
         $("input#pizzaSize").val("");
