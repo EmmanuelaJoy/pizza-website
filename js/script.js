@@ -82,7 +82,7 @@ $(document).ready(function () {
         if (inputtedPizzaName == '' || inputtedPizzaSize == '' || inputtedPizzaAmount == '' || inputtedPizzaCrust == '') {
             event.preventDefault();
         } else {
-            alert("Your order for " + inputtedPizzaName + "has been placed, you may proceed to checkout or order another pizza")
+            alert("Your order for " + inputtedPizzaName + " has been placed, you may proceed to checkout or order another pizza")
         }
 
         $("ul#orders").append("<li><span class='order'>" + newOrder.fullName() + " pizza" + "</span></li>");
