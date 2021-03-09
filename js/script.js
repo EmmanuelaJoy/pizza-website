@@ -88,6 +88,7 @@ $(document).ready(function () {
             $(".crust").text(newOrder.pizzaCrust);
         });
 
+        $("#orderForm").trigger("reset");
     });
 
 
