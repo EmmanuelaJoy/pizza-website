@@ -134,7 +134,7 @@
         <div id="order">
             <h3>PLACE YOUR ORDER HERE</h3>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <form id="orderForm">
                         <div class="form-group">
                             <label for="pizzaName" class="form-label">Select your pizza:</label><br>
@@ -150,7 +150,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="pizzaSize" class="form-label">Select the sizeof the pizza:</label><br>
+                            <label for="pizzaSize" class="form-label">Select the size of the pizza:</label><br>
                             <select name="pizzaSize" id="pizza-size" required>
                                 <option value="" selected>Size of pizza</option>
                                 <option value="small">Small</option>
@@ -175,7 +175,7 @@
                             </select>
                         </div>
                         <div class="form-group" id="pizza-toppings">
-                            <label>Why not select some extra toppings while you're at it?</label><br>
+                            <label>Would you like some extra toppings to go with it?</label><br>
                             <input type="checkbox" id="salami" name="pizza-toppings" value="salami">
                             <label for="salami">Salami</label><br>
                             <input type="checkbox" id="mushroom" name="pizza-toppings" value="mushroom">
@@ -190,21 +190,24 @@
 
                         <button type="submit" class="btn btn-primary">Place Order</button>
                     </form>
+                </div>
 
+                <div class="col-md-4">
                     <h4>My Orders:</h4>
                     <ul id="orders">
 
                     </ul>
                 </div>
-                <div class="col-md-6">
+
+                <div class="col-md-4">
                     <div id="show-orders">
                         <h4></h4>
 
                         <p>Your Pizza: <span class="name"></span></p>
-                        <p>The Size: <span class="size"></span></p>
+                        <p>The Size: <span class="size"></span><span class="sizePrice"></span></p>
+                        <p>The Crust: <span class="crust"></span><span class="crustPrice"></span></p>
+                        <p>The Toppings: <span class="toppings"><span class="toppingsPrice"></span></span></p>
                         <p>Amount of Pizzas: <span class="amount"></span></p>
-                        <p>The Crust: <span class="crust"></span></p>
-                        <p>The Toppings: <span class="toppings"></span></p>
                         <p>Total Charge: <span class="totalCharge"></span></p>
                     </div>
                 </div>

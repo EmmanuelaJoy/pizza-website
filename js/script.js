@@ -93,6 +93,16 @@ $(document).ready(function () {
         });
 
         $("#orderForm").trigger("reset");
+
+
+
+
+
+
+
+
+
+
     });
 
 
