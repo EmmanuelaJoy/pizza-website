@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amita:wght@700&family=Monda&family=Paytone+One&display=swap");
 * {
-  font-family: "Exo 2", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -279,7 +278,6 @@ h3 {
 
 #order {
   height: 100vh;
-  border: 2px groove rgb(248, 248, 15);
   font-family: "Monda", sans-serif;
   font-weight: 300px;
   font-size: 22px;
@@ -295,6 +293,25 @@ select {
 
 #show-orders {
   display: none;
+  border: 2px groove rgb(248, 248, 15);
+}
+
+#orderForm {
+  text-align: left;
+}
+
+#orderForm select {
+  font-size: 1.5rem;
+}
+
+#orderForm button {
+  font-size: 2rem;
+  padding: 0.5em 1em;
+}
+
+h4 {
+  font-size: 3rem;
+  font-family: "Amita", cursive;
 }
 
 .order {
