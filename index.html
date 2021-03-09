@@ -139,12 +139,12 @@
                         <div class="form-group">
                             <label for="pizzaName" class="form-label">Select your pizza:</label><br>
                             <select name="pizzaName" id="pizza-name" required>
-                                <option value="" selected>BBQ Beef</option>
-                                <option value="">Meat Lovers</option>
-                                <option value="">Pepperoni</option>
-                                <option value="">BBQ Chicken</option>
-                                <option value="">Chicken Tikka</option>
-                                <option value="">Hawaiian</option>
+                                <option value="BBQ Beef" selected>BBQ Beef</option>
+                                <option value="Meat Lovers">Meat Lovers</option>
+                                <option value="Pepperoni">Pepperoni</option>
+                                <option value="BBQ Chicken">BBQ Chicken</option>
+                                <option value="Chicken Tikka">Chicken Tikka</option>
+                                <option value="Hawaiian">Hawaiian</option>
                             </select>
                         </div>
 
@@ -172,15 +172,15 @@
                         </div>
                         <div class="form-group" id="pizza-toppings">
                             <label>Why not select some extra toppings while you're at it?</label><br>
-                            <input type="checkbox" id="salami" name="salami" value="salami">
+                            <input type="checkbox" id="salami" name="pizza-toppings" value="salami">
                             <label for="salami">Salami</label><br>
-                            <input type="checkbox" id="mushroom" name="mushroom" value="mushroom">
+                            <input type="checkbox" id="mushroom" name="pizza-toppings" value="mushroom">
                             <label for="mushroom">Mushroom</label><br>
-                            <input type="checkbox" id="onions" name="onions" value="onions">
+                            <input type="checkbox" id="onions" name="pizza-toppings" value="onions">
                             <label for="onions">Onions</label><br>
-                            <input type="checkbox" id="bacon" name="bacon" value="bacon">
+                            <input type="checkbox" id="bacon" name="pizza-toppings" value="bacon">
                             <label for="bacon">Bacon</label><br>
-                            <input type="checkbox" id="mozzarella" name="mozzarella" value="mozzarella">
+                            <input type="checkbox" id="mozzarella" name="pizza-toppings" value="mozzarella">
                             <label for="mozzarella">Mozzarella</label><br>
                         </div>
 
@@ -196,11 +196,11 @@
                     <div id="show-orders">
                         <h4></h4>
 
-                        <p>Your Pizza: <span class="pizzaName"></span></p>
-                        <p>The Size: <span class="pizzaSize"></span></p>
-                        <p>The Crust: <span class="pizzaCrust"></span></p>
+                        <p>Your Pizza: <span class="name"></span></p>
+                        <p>The Size: <span class="size"></span></p>
+                        <p>Amount of Pizzas: <span class="amount"></span></p>
+                        <p>The Crust: <span class="crust"></span></p>
                         <p>The Toppings: <span class="pizzaToppings"></span></p>
-                        <p>Amount of Pizzas: <span class="pizzAmount"></span></p>
                         <p>Total Charge: <span class="totalCharge"></span></p>
                     </div>
                 </div>

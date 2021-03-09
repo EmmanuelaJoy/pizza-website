@@ -86,44 +86,45 @@ $(document).ready(function () {
      }*/
 
     //business logic
-    function Pizza(name, size, amount, crust, toppings) {
+    function Pizza(name, size, amount, crust) {
         this.pizzaName = name;
         this.pizzaSize = size;
         this.pizzaAmount = amount;
         this.pizzaCrust = crust;
-        this.pizzaToppings = toppings;
     }
 
+    Pizza.prototype.fullName = function () {
+        return this.pizzaAmount + " " + this.pizzaName;
+    }
 
-    $("form#orderForm").submit(function (event) {
-        event.preventDefault();
+    $(document).ready(function () {
+        $("form#orderForm").submit(function (event) {
+            event.preventDefault();
 
-        var inputtedPizzaName = $("input#pizza-name").val();
-        var inputtedPizzaSize = $("input#pizza-size").val();
-        var inputtedPizzaAmount = $("input#pizza-amount").val();
-        var inputtedPizzaCrust = $("input#pizza-crust").val();
-        var inputtedPizzaToppings = $("input#pizza-toppings").val();
+            var inputtedPizzaName = $("#pizza-name option:selected").val();
+            var inputtedPizzaSize = $("#pizza-size option:selected").val();
+            var inputtedPizzaAmount = $("input#pizza-amount").val();
+            var inputtedPizzaCrust = $("#pizza-crust option:selected").val();
 
-        var newOrder = new Pizza(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaAmount, inputtedPizzaCrust, inputtedPizzaToppings);
+            var newOrder = new Pizza(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaAmount, inputtedPizzaCrust);
 
-        $("ul#orders").append("<li><span class='order'>" + newOrder.pizzaName + "</span></li>");
+            $("ul#orders").append("<li><span class='order'>" + newOrder.fullName() + "</span></li>");
 
-        $("input#pizzaName").val("");
-        $("input#pizzaSize").val("");
-        $("input#pizzaAmount").val("");
-        $("input#pizzaCrust").val("");
-        $("input#pizzaToppings").val("");
+            $("#pizza-name option:selected").val("");
+            $("#pizza-size option:selected").val("");
+            $("input#pizza-amount").val("");
+            $("#pizza-crust option:selected").val("");
 
-        $(".order").last().click(function () {
-            $("#show-orders").show();
-            $("#show-orders h4").text(newOrder.pizzaName);
-            $(".pizzaName").text(newOrder.pizzaName);
-            $(".pizzaSize").text(newOrder.pizzaSize);
-            $(".pizzaCrust").text(newOrder.pizzaCrust);
-            $(".pizzaToppings").text(newOrder.pizzaCrust);
+            $(".order").last().click(function () {
+                $("#show-orders").show();
+                $("#show-orders h4").text(newOrder.pizzaName);
+                $(".name").text(newOrder.pizzaName);
+                $(".size").text(newOrder.pizzaSize);
+                $(".amount").text(newOrder.pizzaAmount);
+                $(".crust").text(newOrder.pizzaCrust);
+            });
+
         });
-
     });
-
 
 });
