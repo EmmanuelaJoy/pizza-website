@@ -139,7 +139,8 @@
                         <div class="form-group">
                             <label for="pizzaName" class="form-label">Select your pizza:</label><br>
                             <select name="pizzaName" id="pizza-name" required>
-                                <option value="BBQ Beef" selected>BBQ Beef</option>
+                                <option value="" selected>Type of pizza</option>
+                                <option value="BBQ Beef">BBQ Beef</option>
                                 <option value="Meat Lovers">Meat Lovers</option>
                                 <option value="Pepperoni">Pepperoni</option>
                                 <option value="BBQ Chicken">BBQ Chicken</option>
@@ -151,7 +152,8 @@
                         <div class="form-group">
                             <label for="pizzaSize" class="form-label">Select the sizeof the pizza:</label><br>
                             <select name="pizzaSize" id="pizza-size" required>
-                                <option value="small" selected>Small</option>
+                                <option value="" selected>Size of pizza</option>
+                                <option value="small">Small</option>
                                 <option value="medium">Medium</option>
                                 <option value="large">Large</option>
                             </select>
@@ -159,13 +161,15 @@
 
                         <div class="form-group">
                             <label for="pizzaAmount" class="form-label">How many of these pizzas would you like?</label>
-                            <input type="number" id="pizza-amount" class="form-control" required>
+                            <input type="number" id="pizza-amount" class="form-control" placeholder="Number of pizzas"
+                                required>
                         </div>
 
                         <div class="form-group">
                             <label for="pizzaCrust" class="form-label">How about the crust?</label><br>
                             <select name="pizzaCrust" id="pizza-crust" required>
-                                <option value="crispy" selected>Crispy</option>
+                                <option value="" selected>Type of crust</option>
+                                <option value="crispy">Crispy</option>
                                 <option value="stuffed">Stuffed</option>
                                 <option value="gluten-free">Gluten-free</option>
                             </select>
