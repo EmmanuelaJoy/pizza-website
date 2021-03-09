@@ -79,8 +79,13 @@ $(document).ready(function () {
 
         var newOrder = new Pizza(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaAmount, inputtedPizzaCrust, inputtedPizzaToppings);
 
-        $("ul#orders").append("<li><span class='order'>" + newOrder.fullName() + " pizza" + "</span></li>");
+        if (inputtedPizzaName == '' || inputtedPizzaSize == '' || inputtedPizzaAmount == '' || inputtedPizzaCrust == '') {
+            event.preventDefault();
+        } else {
+            alert("Your order for " + inputtedPizzaName + "has been placed, you may proceed to checkout or order another pizza")
+        }
 
+        $("ul#orders").append("<li><span class='order'>" + newOrder.fullName() + " pizza" + "</span></li>");
         $("#pizza-name option:selected").val("");
         $("#pizza-size option:selected").val("");
         $("input#pizza-amount").val("");
