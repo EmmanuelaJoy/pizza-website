@@ -292,8 +292,20 @@ select {
 }
 
 #show-orders {
+  width: 350px;
+  border: 22px solid rgb(219, 175, 63);
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  padding: 22px;
+  background-color: #077afb;
+  color: white;
+  text-align: center;
   display: none;
-  border: 2px groove rgb(248, 248, 15);
+}
+
+#orders {
+  color: rgb(219, 175, 63);
 }
 
 #orderForm {
