@@ -9,11 +9,12 @@ themeButton.addEventListener("click", () => {
 })
 
 
-function Pizza(name, size, amount, crust) {
+function Pizza(name, size, amount, crust, toppings) {
     this.pizzaName = name;
     this.pizzaSize = size;
     this.pizzaAmount = amount;
     this.pizzaCrust = crust;
+    this.pizzaToppings = toppings;
 }
 
 Pizza.prototype.fullName = function () {
@@ -69,8 +70,9 @@ $(document).ready(function () {
         var inputtedPizzaSize = $("#pizza-size option:selected").val();
         var inputtedPizzaAmount = $("input#pizza-amount").val();
         var inputtedPizzaCrust = $("#pizza-crust option:selected").val();
+        var inputtedPizzaToppings = $('input[type="checkbox"]:checked').val();
 
-        var newOrder = new Pizza(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaAmount, inputtedPizzaCrust);
+        var newOrder = new Pizza(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaAmount, inputtedPizzaCrust, inputtedPizzaToppings);
 
         $("ul#orders").append("<li><span class='order'>" + newOrder.fullName() + " pizza" + "</span></li>");
 
@@ -78,6 +80,7 @@ $(document).ready(function () {
         $("#pizza-size option:selected").val("");
         $("input#pizza-amount").val("");
         $("#pizza-crust option:selected").val("");
+        $('input[type="checkbox"]:checked').val("");
 
         $(".order").last().click(function () {
             $("#show-orders").show();
@@ -86,6 +89,7 @@ $(document).ready(function () {
             $(".size").text(newOrder.pizzaSize);
             $(".amount").text(newOrder.pizzaAmount);
             $(".crust").text(newOrder.pizzaCrust);
+            $(".toppings").text(newOrder.pizzaToppings);
         });
 
         $("#orderForm").trigger("reset");

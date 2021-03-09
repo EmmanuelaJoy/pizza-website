@@ -26,6 +26,9 @@ body.dark-theme {
   color: #fff;
 }
 
+body.dark-theme .card-text {
+  color: #000;
+}
 /*start of landing page*/
 
 #landingPage {
@@ -282,6 +285,14 @@ h3 {
   font-size: 22px;
 }
 
+select {
+  width: 80%;
+}
+
+#pizzaAmount input {
+  width: 80%;
+}
+
 #show-orders {
   display: none;
 }
@@ -294,6 +305,7 @@ h3 {
 .order:hover {
   text-decoration: underline;
 }
+/*end of order section*/
 
 /*start of contact section*/
 #contact {
@@ -306,17 +318,17 @@ h3 {
   padding-inline: 18rem;
 }
 
-.form-control {
+#contactForm .form-control {
   margin: 5em;
 }
 
-#submitBtn {
+#contact #submitBtn {
   padding: 0.5em 2em;
   margin-top: 2em;
   background: rgb(76, 126, 173);
 }
 
-#submitBtn:hover {
+#contact #submitBtn:hover {
   background: rgb(219, 175, 63);
   color: #000;
 }
