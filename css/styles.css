@@ -285,14 +285,18 @@ h3 {
 
 select {
   width: 80%;
+  height: 30px;
 }
 
-#pizzaAmount input {
+input#pizza-amount {
   width: 80%;
+  height: 30px;
+  border: 1px solid black;
+  font-size: 1.5rem;
 }
 
 #show-orders {
-  width: 350px;
+  width: 370px;
   border: 22px solid rgb(219, 175, 63);
   border-top-right-radius: 2px;
   border-bottom-left-radius: 45px;
@@ -314,10 +318,15 @@ select {
 
 #orderForm select {
   font-size: 1.5rem;
+  color: rgb(104, 103, 103);
 }
 
-#orderForm button {
-  font-size: 2rem;
+.form-group #pizzaToppings {
+  display: inline-block;
+}
+
+#order button {
+  font-size: 15px;
   padding: 0.5em 1em;
 }
 
