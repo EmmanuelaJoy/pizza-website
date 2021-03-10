@@ -159,6 +159,7 @@
                                 <option value="medium">Medium @850</option>
                                 <option value="large">Large @1000</option>
                             </select>
+                            <span class="sizePrice">/=</span>
                         </div>
 
                         <div class="form-group">
@@ -175,22 +176,29 @@
                                 <option value="stuffed">Stuffed</option>
                                 <option value="gluten-free">Gluten-free</option>
                             </select>
+                            <span class="crustPrice">/=</span>
                         </div>
+
                         <div class="form-group" id="pizza-toppings">
                             <label>Would you like some extra toppings to go with it?</label><br>
-                            <input type="checkbox" id="salami" name="pizzaTop" value="salami">
+                            <input type="checkbox" id="salami" name="pizzaTop" value="salami"> <span
+                                class="toppingsPrice">/=</span>
                             <label for="salami">Salami</label><br>
-                            <input type="checkbox" id="mushroom" name="pizzaTop" value="mushroom">
+                            <input type="checkbox" id="mushroom" name="pizzaTop" value="mushroom"> <span
+                                class="toppingsPrice">/=</span>
                             <label for="mushroom">Mushroom</label><br>
-                            <input type="checkbox" id="onions" name="pizzaTop" value="onions">
+                            <input type="checkbox" id="onions" name="pizzaTop" value="onions"> <span
+                                class="toppingsPrice">/=</span>
                             <label for="onions">Onions</label><br>
-                            <input type="checkbox" id="bacon" name="pizzaTop" value="bacon">
+                            <input type="checkbox" id="bacon" name="pizzaTop" value="bacon"> <span
+                                class="toppingsPrice">/=</span>
                             <label for="bacon">Bacon</label><br>
-                            <input type="checkbox" id="mozzarella" name="pizzaTop" value="mozzarella">
+                            <input type="checkbox" id="mozzarella" name="pizzaTop" value="mozzarella"> <span
+                                class="toppingsPrice">/=</span>
                             <label for="mozzarella">Mozzarella</label><br>
                         </div>
 
-                        <button type="submit" class="btn btn-primary" id="placeOrder">Place Order</button>
+                        <button type="submit" class="btn btn-primary" id="addOrder">Add Order</button>
                     </form>
                 </div>
 
@@ -201,9 +209,10 @@
 
                         </ul>
                         <button type="submit" class="btn btn-primary" id="removeOrders">Remove Orders</button>
-                        <button type="submit" class="btn btn-primary" id="checkout">Checkout</button>
+                        <button type="submit" class="btn btn-primary" id="placeOrder">Place Order</button>
                         <button type="submit" class="btn btn-primary" id="homeDelivery">Home Delivery</button>
                         <button type="submit" class="btn btn-primary" id="pickup">Pickup</button>
+                        <button type="submit" class="btn btn-primary" id="checkout">Checkout</button>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -211,9 +220,9 @@
                         <h4></h4>
 
                         <p>Your Pizza: <span class="name"></span></p>
-                        <p>The Size: <span class="size"></span><span class="sizePrice"></span>/=</p>
-                        <p>The Crust: <span class="crust"></span><span class="crustPrice"></span>/=</p>
-                        <p>The Toppings: <span class="toppings"><span class="toppingsPrice"></span>/=</p>
+                        <p>The Size: <span class="size"></span><span class="sizePrice"></span></p>
+                        <p>The Crust: <span class="crust"></span><span class="crustPrice"></span></p>
+                        <p>The Toppings: <span class="toppings"><span class="toppingsPrice"></span></p>
                         <p>Amount of Pizzas: <span class="amount"></span></p>
                         <p>Total Charge: <span class="totalCharge"></span>/=</p>
                     </div>

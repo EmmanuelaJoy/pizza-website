@@ -97,6 +97,7 @@ $(document).ready(function () {
         }
     });
 
+    //add order button
     $("form#orderForm").submit(function (event) {
         event.preventDefault();
 
@@ -115,7 +116,7 @@ $(document).ready(function () {
             if (inputtedPizzaName == '' || inputtedPizzaSize == '' || inputtedPizzaAmount == '' || inputtedPizzaCrust == '') {
                 event.preventDefault();
             } else {
-                alert("Your order for " + inputtedPizzaName + " has been placed, you may proceed to checkout or order another pizza");
+                alert("Your order for " + inputtedPizzaName + " has been added, you may proceed to checkout or order another pizza");
             }
 
         }
@@ -131,7 +132,7 @@ $(document).ready(function () {
         $(".order").last().click(function () {
             $("#show-orders").show();
             $("button#removeOrders").show();
-            $("button#checkout").show();
+            $("button#placeOrder").show();
             $("#show-orders h4").text(newOrder.pizzaName);
             $(".name").text(newOrder.pizzaName);
             $(".size").text(newOrder.pizzaSize);
@@ -144,9 +145,10 @@ $(document).ready(function () {
 
     });
 
-    $("button#checkout").click(function () {
+    //place order button
+    $("button#placeOrder").click(function () {
+        $("button#addOrder").hide();
         $("button#placeOrder").hide();
-        $("button#checkout").hide();
         $("#addedprice").slideDown(1000);
         $("button#homeDelivery").slideDown(1000);
         $("button#pickup").slideDown(1000);
@@ -154,11 +156,13 @@ $(document).ready(function () {
         $("#pizzatotal").append("Your bill is sh. " + checkoutTotal);
     });
 
+    //delivery button
     $("button#homeDelivery").click(function () {
         let deliveryArea = prompt("Where would you like the pizza to be delivered?");
         let confirmation = confirm("Proceed with " + deliveryArea + " home address?")
         if (confirmation == true) {
-            alert("Order Received! We will deliver your pizza to " + deliveryArea);
+            alert("Your pizza will be delivered to " + deliveryArea + " kindly proceed to checkout");
+            $("button#checkout").show();
         } else if (confirmation == false) {
             alert("Select another delivery area");
         }
