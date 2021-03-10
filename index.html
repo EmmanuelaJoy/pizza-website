@@ -138,6 +138,7 @@
                     <form id="orderForm">
                         <div class="form-group">
                             <label for="pizzaName" class="form-label">Select your pizza:</label><br>
+
                             <select name="pizzaName" id="pizza-name" required>
                                 <option value="" selected>Type of pizza</option>
                                 <option value="BBQ Beef">BBQ Beef</option>
@@ -147,6 +148,7 @@
                                 <option value="Chicken Tikka">Chicken Tikka</option>
                                 <option value="Hawaiian">Hawaiian</option>
                             </select>
+
                         </div>
 
                         <div class="form-group">
@@ -188,28 +190,32 @@
                             <label for="mozzarella">Mozzarella</label><br>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Place Order</button>
+                        <button type="submit" class="btn btn-primary" id="placeOrder">Place Order</button>
                     </form>
                 </div>
 
                 <div class="col-md-3">
-                    <h4>My Orders:</h4>
-                    <ul id="orders">
+                    <div id="ordersPlaced">
+                        <h4>My Orders:</h4>
+                        <ul id="orders">
 
-                    </ul>
-                    <button type="submit" class="btn btn-primary">Remove Orders</button>
-                    <button type="submit" class="btn btn-primary">Checkout</button>
+                        </ul>
+                        <button type="submit" class="btn btn-primary" id="removeOrders">Remove Orders</button>
+                        <button type="submit" class="btn btn-primary" id="checkout">Checkout</button>
+                        <button type="submit" class="btn btn-primary" id="homeDelivery">Home Delivery</button>
+                        <button type="submit" class="btn btn-primary" id="pickup">Pickup</button>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div id="show-orders">
                         <h4></h4>
 
                         <p>Your Pizza: <span class="name"></span></p>
-                        <p>The Size: <span class="size"></span><span class="sizePrice"></span></p>
-                        <p>The Crust: <span class="crust"></span><span class="crustPrice"></span></p>
-                        <p>The Toppings: <span class="toppings"><span class="toppingsPrice"></span></span></p>
+                        <p>The Size: <span class="size"></span><span class="sizePrice"></span>/=</p>
+                        <p>The Crust: <span class="crust"></span><span class="crustPrice"></span>/=</p>
+                        <p>The Toppings: <span class="toppings"><span class="toppingsPrice"></span>/=</p>
                         <p>Amount of Pizzas: <span class="amount"></span></p>
-                        <p>Total Charge: <span class="totalCharge"></span></p>
+                        <p>Total Charge: <span class="totalCharge"></span>/=</p>
                     </div>
                 </div>
             </div>

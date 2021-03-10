@@ -280,6 +280,12 @@ h3 {
   font-family: "Monda", sans-serif;
   font-weight: 300px;
   font-size: 22px;
+  padding: 20px 25px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  margin-top: 0;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 select {
@@ -301,6 +307,7 @@ input#pizza-amount {
   border-bottom-left-radius: 45px;
   border-bottom-right-radius: 45px;
   padding: 22px;
+  margin: 0 auto;
   background-color: #077afb;
   color: white;
   text-align: center;
@@ -342,6 +349,11 @@ h4 {
 .order:hover {
   text-decoration: underline;
 }
+
+#ordersPlaced button {
+  display: none;
+}
+
 /*end of order section*/
 
 /*start of contact section*/
@@ -435,5 +447,18 @@ h4 {
 
   #aboutTitle {
     margin-top: 8em;
+  }
+  /*end of about media-query*/
+
+  #order {
+    text-align: center;
+  }
+
+  #orderForm {
+    text-align: center;
+  }
+
+  input#pizza-amount {
+    margin: 0 auto;
   }
 }
