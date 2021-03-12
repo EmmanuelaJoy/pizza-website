@@ -20,6 +20,21 @@ p {
   font-size: 24px;
 }
 
+button {
+  background: rgb(76, 126, 173);
+  font-family: fantasy;
+  font-weight: bold;
+  border: none;
+  padding: 0.5em 2em;
+  margin-top: 2em;
+}
+
+button:hover {
+  background: rgb(219, 175, 63);
+  color: #000;
+  letter-spacing: 1px;
+}
+
 body.dark-theme {
   background-color: #1d2521;
   color: #fff;
@@ -28,6 +43,11 @@ body.dark-theme {
 body.dark-theme .card-text {
   color: #000;
 }
+
+body.dark-theme .card {
+  background-color: rgb(219 178 63 / 87%);
+}
+
 /*start of landing page*/
 
 #landingPage {
@@ -123,18 +143,15 @@ h2 {
   color: white;
 }
 
-button {
+#homeTitle button {
   font-size: 2rem;
-  font-family: fantasy;
-  font-weight: bold;
-  border: none;
   padding: 0.5em 2em;
   margin-top: 3em;
   cursor: pointer;
   background-color: rgb(219, 175, 63);
 }
 
-button:hover {
+#homeTitle button:hover {
   letter-spacing: 4px;
 }
 
@@ -224,6 +241,10 @@ h3 {
   margin-top: 5em;
 }
 
+#menu h3 {
+  background-color: #333;
+}
+
 .card-container {
   width: 100%;
   margin: 7rem auto;
@@ -288,6 +309,34 @@ h3 {
   padding-right: 25px;
 }
 
+#order h3 {
+  background-color: #333;
+  padding: 0px 0px;
+}
+
+.toggleCart {
+  margin-left: 3em;
+  background-color: rgb(219, 175, 63);
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  padding: 7px 10px;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggleCart:hover {
+  background-color: #fff;
+  color: rgb(219, 175, 63);
+  box-shadow: 0px 3px 6px rgba(250, 245, 245, 0.16),
+    0px 6px 10px rgba(0, 0, 0, 0.23);
+  transform: scale(1.05, 1.05);
+}
+
 select {
   width: 80%;
   height: 30px;
@@ -326,12 +375,36 @@ input#pizza-amount {
   font-size: 1.5rem;
   color: rgb(104, 103, 103);
 }
-.sizePrice,
-.crustPrice,
-.toppingsPrice {
-  display: block;
-  text-align: center;
-  display: none;
+
+input#sizePrice {
+  border-style: none;
+  color: rgb(219, 175, 63);
+  font-size: 20px;
+  font-style: italic;
+  width: 3em;
+}
+
+input#amount {
+  border-style: none;
+  color: rgb(219, 175, 63);
+  font-size: 20px;
+  font-style: italic;
+  width: 3em;
+}
+
+input#crustPrice {
+  border-style: none;
+  color: rgb(219, 175, 63);
+  font-size: 20px;
+  font-style: italic;
+  width: 3em;
+}
+
+input#toppingsPrice {
+  border-style: none;
+  color: rgb(219, 175, 63);
+  font-size: 20px;
+  width: 3em;
 }
 
 .form-group #pizzaToppings {
@@ -357,7 +430,15 @@ h4 {
   text-decoration: underline;
 }
 
-#ordersPlaced button {
+button#proceed {
+  display: none;
+}
+
+#deliveryOption {
+  display: none;
+}
+
+button#checkout {
   display: none;
 }
 
@@ -365,27 +446,40 @@ h4 {
 
 /*start of contact section*/
 #contact {
-  height: 92vh;
+  height: fit-content;
   text-align: center;
   display: block;
-}
-
-#card-content {
-  padding-inline: 18rem;
+  font-size: 30px;
+  background-color: #333;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #contactForm .form-control {
-  margin: 5em;
+  margin: 2em;
+  background: transparent;
+  border: 2pt solid #fff;
+  text-align: left;
+  font-size: 16px;
+}
+
+#contactForm input {
+  width: 90%;
+  height: 50%;
+}
+
+#contactForm textarea {
+  color: #fff;
 }
 
 #contact #submitBtn {
   padding: 0.5em 2em;
   margin-top: 2em;
+  font-size: 18px;
   background: rgb(76, 126, 173);
 }
 
 #contact #submitBtn:hover {
-  background: rgb(219, 175, 63);
   color: #000;
 }
 

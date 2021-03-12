@@ -9,7 +9,7 @@ themeButton.addEventListener("click", () => {
     themeButton.classList.toggle(iconTheme)
 })
 
-
+/*pizza objects constructor*/
 function Pizza(name, size, amount, crust, toppings, total) {
     this.pizzaName = name;
     this.pizzaSize = size;
@@ -23,37 +23,71 @@ Pizza.prototype.fullName = function () {
     return this.pizzaAmount + " " + this.pizzaName;
 }
 
+let sizePrice;
+
+$(function () {
+    $('#pizza-size').change(function () {
+        sizePrice = {
+            'small': 650,
+            'medium': 850,
+            'large': 1000
+        };
+        $('input[name=sizePrice]').val(sizePrice[$(this).val()]);
+    });
+});
+
+$(function () {
+    $('#pizza-crust').change(function () {
+        var crustPrices = {
+            'crispy': 100,
+            'stuffed': 150,
+            'gluten-free': 200
+        };
+        $('input[name=crustPrice]').val(crustPrices[$(this).val()]);
+    });
+});
 
 
-Pizza.prototype.sizePrice = function () {
-    if (this.pizzaSize === "small") {
-        this.sizePrice + 650;
-    } else if (this.pizzaSize === "medium") {
-        this.sizePrice + 850;
-    } else if (this.pizzaSize === "large") {
-        this.sizePrice + 1000;
+$(".pizzaTop").click(function (event) {
+    var toppingsTotal = 0;
+    $(".pizzaTop:checked").each(function () {
+        toppingsTotal += 100;
+        $('input[name=toppingsPrice]').val(toppingsPrice[$(this).val()]);
+
+    });
+
+    if (toppingsTotal == 0) {
+        $('#topAmount').val('');
+    } else {
+        $('#topAmount').val(toppingsTotal);
     }
-}
+});
 
-Pizza.prototype.crustPrice = function () {
-    if (this.pizzaSize === "small") {
+/*Pizza.prototype.crustPrice = function () {
+    if (inputtedPizzaSize === "small") {
         this.crustPrice + 100;
-    } else if (this.pizzaSize === "medium") {
+        return crustPrice;
+    } else if (inputtedPizzaSize === "medium") {
         this.sizePrice + 150;
-    } else if (this.pizzaSize === "large") {
+    } else if (inputtedPizzaSize === "large") {
         this.sizePrice + 200;
     }
 }
 
-Pizza.prototype.crustPrice = function () {
-    if (this.pizzaSize === "small") {
-        this.crustPrice + 50;
-    } else if (this.pizzaSize === "medium") {
-        this.sizePrice + 100;
-    } else if (this.pizzaSize === "large") {
-        this.sizePrice + 1500;
+Pizza.prototype.toppingsPrice = function () {
+    if (inputtedPizzaSize === "small") {
+        this.toppingsPrice + 50;
+    } else if (inputtedPizzaSize === "medium") {
+        this.toppingsPrice + 100;
+    } else if (inputtedPizzaSize === "large") {
+        this.toppingsPrice + 1500;
     }
 }
+
+total = sizePrice() + crustPrice() + toppingsPrice();
+console.log(total);
+let checkoutTotal = 0;
+checkoutTotal = checkoutTotal + total; */
 
 //user-interface logic
 
@@ -112,17 +146,17 @@ $(document).ready(function () {
 
 
         var newOrder = new Pizza(inputtedPizzaName, inputtedPizzaSize, inputtedPizzaAmount, inputtedPizzaCrust, inputtedPizzaToppings);
-        var placeOrder = function () {
+        var proceed = function () {
             if (inputtedPizzaName == '' || inputtedPizzaSize == '' || inputtedPizzaAmount == '' || inputtedPizzaCrust == '') {
                 event.preventDefault();
             } else {
-                alert("Your order for " + inputtedPizzaName + " has been added, you may proceed to checkout or order another pizza");
+                alert("Your order for " + inputtedPizzaName + " has been added, click on it to proceed to checkout or order another pizza");
             }
 
         }
-        placeOrder();
+        proceed();
 
-        $("ul#orders").append("<li><span class='order'>" + newOrder.fullName() + " pizza" + "</span></li>");
+        $("ul#orders").append("<li><span class='order'>" + newOrder.fullName() + " pizza" + "</span>" + "<i class='fas fa-trash'></i>" + "</li>");
         $("#pizza-name option:selected").val("");
         $("#pizza-size option:selected").val("");
         $("input#pizza-amount").val("");
@@ -131,29 +165,39 @@ $(document).ready(function () {
 
         $(".order").last().click(function () {
             $("#show-orders").show();
-            $("button#removeOrders").show();
-            $("button#placeOrder").show();
+            $("button#proceed").show();
             $("#show-orders h4").text(newOrder.pizzaName);
             $(".name").text(newOrder.pizzaName);
-            $(".size").text(newOrder.pizzaSize);
+            $(".size").text(newOrder.pizzaSize)
             $(".amount").text(newOrder.pizzaAmount);
-            $(".crust").text(newOrder.pizzaCrust);
-            $(".toppings").text(newOrder.pizzaToppings);
+            $(".crust").text(newOrder.pizzaCrust)
+            $(".toppings").text(newOrder.pizzaToppings)
         });
 
         $("#orderForm").trigger("reset");
 
     });
 
-    //place order button
-    $("button#placeOrder").click(function () {
+    //proceed to checkout button
+    $("button#proceed").click(function () {
         $("button#addOrder").hide();
-        $("button#placeOrder").hide();
-        $("#addedprice").slideDown(1000);
-        $("button#homeDelivery").slideDown(1000);
-        $("button#pickup").slideDown(1000);
-        console.log("Your total bills is sh. " + checkoutTotal);
-        $("#pizzatotal").append("Your bill is sh. " + checkoutTotal);
+        $("button#proceed").hide();
+        $("#buyerInfo").show();
+    });
+
+    //place order button
+    $("button#placeOrder").click(function (event) {
+        event.preventDefault();
+        var buyerName = $("#buyerName").val();
+        var buyerNumber = $("#buyerNumber").val();
+        var buyerAddress = $("#buyerAddress").val();
+        if (buyerName == '' || buyerNumber == '' || buyerAddress == '') {
+            alert("Fill in form details first");
+        } else {
+            alert("Details received! Choose delivery option.");
+            $("#buyerInfo").hide();
+            $("#deliveryOption").slideDown(1000);
+        }
     });
 
     //delivery button
@@ -161,10 +205,24 @@ $(document).ready(function () {
         let deliveryArea = prompt("Where would you like the pizza to be delivered?");
         let confirmation = confirm("Proceed with " + deliveryArea + " home address?")
         if (confirmation == true) {
+            alert("Please note that you will incur 200/= charge for delivery to " + deliveryArea);
             alert("Your pizza will be delivered to " + deliveryArea + " kindly proceed to checkout");
             $("button#checkout").show();
         } else if (confirmation == false) {
             alert("Select another delivery area");
         }
+    });
+
+    //pickup button
+    $("button#pickup").click(function () {
+        alert("Your order will be ready for pickup at Roysambu along Lumumba Drive. Proceed to checkout");
+        $("button#checkout").show();
+    });
+
+    // Checkout button
+    $("button#checkout").click(function () {
+        $("#deliveryOption").hide();
+        $("ul#orders").hide();
+        $("button#checkout").hide();
     });
 });
