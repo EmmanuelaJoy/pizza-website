@@ -367,6 +367,10 @@ input#pizza-amount {
   color: rgb(219, 175, 63);
 }
 
+#buyerInfo {
+  display: none;
+}
+
 #orderForm {
   text-align: left;
 }

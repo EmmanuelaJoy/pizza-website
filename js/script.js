@@ -9,6 +9,14 @@ themeButton.addEventListener("click", () => {
     themeButton.classList.toggle(iconTheme)
 })
 
+//function to calculate total pizza cost
+/*let totalPizzaCost = 0;
+let pizzacost = [sizePrice, crustPrices, toppingsTotal];
+pizzacost.forEach(function (cost) {
+    totalPizzaCost += cost;
+}); */
+
+
 /*pizza objects constructor*/
 function Pizza(name, size, amount, crust, toppings, total) {
     this.pizzaName = name;
