@@ -17,7 +17,7 @@ html {
 }
 
 p {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 button {
@@ -36,8 +36,16 @@ button:hover {
 }
 
 body.dark-theme {
-  background-color: #1d2521;
+  background-color: #101015;
   color: #fff;
+}
+
+body.dark-theme .header-active {
+  background-color: #242e38;
+}
+
+body.dark-theme .nav-toggle {
+  background-color: #242e38;
 }
 
 body.dark-theme .card-text {
@@ -45,7 +53,19 @@ body.dark-theme .card-text {
 }
 
 body.dark-theme .card {
-  background-color: rgb(219 178 63 / 87%);
+  background-color: rgb(219 178 63 / 77%);
+}
+
+body.dark-theme .card:hover {
+  background-color: rgb(219 178 63);
+}
+
+body.dark-theme .header-active {
+  background-color: #242e38;
+}
+
+body.dark-theme footer {
+  background-color: #242e38;
 }
 
 /*start of landing page*/
@@ -76,6 +96,10 @@ body.dark-theme .card {
   list-style: none;
 }
 
+.nav-toggle {
+  background: #7d8790;
+}
+
 .nav-item {
   margin-right: 4rem;
 }
@@ -91,7 +115,8 @@ body.dark-theme .card {
 }
 
 #header .fa-pizza-slice {
-  font-size: 6rem;
+  font-size: 4.5rem;
+  margin-right: 0.5em;
   z-index: 10000;
   color: rgb(219, 175, 63);
   cursor: pointer;
@@ -112,7 +137,7 @@ body.dark-theme .card {
 }
 
 .header-active {
-  background: #333;
+  background: #7d8790;
   height: 6rem;
   box-shadow: 0.2rem 0 0.5rem #000;
 }
@@ -208,6 +233,8 @@ h2 {
   text-align: center;
   position: relative;
   width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 15rem;
   display: flex;
   justify-content: space-between;
 }
@@ -238,11 +265,8 @@ h3 {
 /*menu*/
 #menu {
   text-align: center;
-  margin-top: 5em;
-}
-
-#menu h3 {
-  background-color: #333;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .card-container {
@@ -302,15 +326,14 @@ h3 {
   font-weight: 300px;
   font-size: 22px;
   padding: 20px 25px;
-  margin-top: 50px;
-  margin-bottom: 15px;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
   margin-top: 0;
   padding-left: 25px;
   padding-right: 25px;
 }
 
 #order h3 {
-  background-color: #333;
   padding: 0px 0px;
 }
 
@@ -450,44 +473,106 @@ button#checkout {
 
 /*start of contact section*/
 #contact {
-  height: fit-content;
+  height: max-content;
   text-align: center;
   display: block;
-  font-size: 30px;
-  background-color: #333;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  font-size: 20px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#contactForm .form-control {
-  margin: 2em;
-  background: transparent;
-  border: 2pt solid #fff;
-  text-align: left;
-  font-size: 16px;
-}
-
-#contactForm input {
-  width: 90%;
-  height: 50%;
-}
-
-#contactForm textarea {
-  color: #fff;
-}
-
-#contact #submitBtn {
+#contact #contactBtn {
   padding: 0.5em 2em;
   margin-top: 2em;
   font-size: 18px;
+  color: #fff;
   background: rgb(76, 126, 173);
 }
 
-#contact #submitBtn:hover {
+#contact #contactBtn:hover {
   color: #000;
 }
 
 /*end of contact section*/
+
+/* ---------------------------------------------------------------- */
+/* 20.Contact                            
+/* ---------------------------------------------------------------- */
+.contact-content {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 23px 49px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 23px 49px 0 rgba(0, 0, 0, 0.08);
+}
+
+.contact-content .contact-form .contact-form-group {
+  margin-bottom: 30px;
+}
+
+.contact-content .contact-form .contact-form-group .default-orange-btn {
+  border: none;
+}
+
+.contact-content .contact-form .contact-form-control {
+  width: 100%;
+  border: none;
+  display: block;
+  color: #000;
+  padding: 17px 20px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.contact-content .contact-form .contact-form-control:focus {
+  border-color: #000;
+  color: #000;
+}
+
+.contact-content .contact-form .empty-form span,
+.contact-content .contact-form .email-invalid span,
+.contact-content .contact-form .success-form span {
+  display: block;
+  padding: 17px 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.contact-content .contact-form .empty-form span,
+.contact-content .contact-form .email-invalid span {
+  color: #721c24;
+  background: #f8d7da;
+}
+
+.contact-content .contact-form .success-form span {
+  background: #c3e6cb;
+  color: #155724;
+}
+
+/*start of footer section*/
+
+footer {
+  background-color: #7d8790;
+  padding: 1.6rem 1rem;
+  font-weight: var(--font-semi);
+}
+
+footer p {
+  font-size: 18px;
+  text-align: center;
+}
+
+footer p span {
+  color: rgb(219, 175, 63);
+  cursor: pointer;
+}
+
+/*end of footer section*/
 
 @media (max-width: 1100px) {
   html {
@@ -503,13 +588,16 @@ button#checkout {
     display: block;
   }
 
+  #header {
+    justify-content: space-evenly;
+  }
+
   #header nav {
     position: fixed;
     top: 0;
     left: -120%;
     height: 100vh;
     width: 35rem;
-    background: #000;
   }
 
   .navMenu {
