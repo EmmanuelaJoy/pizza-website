@@ -1,5 +1,3 @@
-# Moringa Project 4
-
 <h1>Pizza-Palace Website</h1>
 <table>
 <tr>
@@ -14,12 +12,15 @@
 
 ## Author's Information
 
-This project was developed by Emmanuela Joy.
-Click on [Emmanuela Joy ](https://github.com/EmmanuelaJoy) to find the link to my Github Site.
+This project was developed by [Emmanuela Joy ](https://github.com/EmmanuelaJoy).
 
 ## Setup Instructions
 
-No set-up instructions at the moment.
+To set up this project:
+
+- Clone the repository by executing the following command in your terminal in the directory of your choice - `git clone https://github.com/EmmanuelaJoy/pizza-website.git`
+- Navigate into the pizza-palace directory - `cd pizza-palace`
+- Open the directory in the editor of your choice.
 
 ## Demo
 
@@ -51,7 +52,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 - CSS.
 - Bootstrap framework.
 - jQuery.
-- JavaScript Programming Language.
+- JavaScript.
 
 ## Contact Information
 
