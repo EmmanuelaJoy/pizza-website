@@ -6,7 +6,7 @@
 <td>
   <p>This is a webpage that displays the various pizzas offered by Pizza Palace Restaurant.</p>
 
-<p>It allows a user to order a pizza by selecting the type of pizza, the size of the pizza, the preferred crust and toppings and finally outputs the total cost of selected items.It also allows the user to receive the purshased pizzas either via delivery or pickup at the restaurant</p>
+<p>It allows a user to order a pizza by selecting the type of pizza, the size of the pizza, the preferred crust and toppings and finally outputs the total cost of selected items.It also allows the user to select how they would like to receive their order that is either via delivery or pickup at the restaurant</p>
 
 </td>
 </tr>
@@ -14,7 +14,7 @@
 
 ## Author's Information
 
-This project was developed by Emmanuela Joy a software development student at Moringa School.
+This project was developed by Emmanuela Joy.
 Click on [Emmanuela Joy ](https://github.com/EmmanuelaJoy) to find the link to my Github Site.
 
 ## Setup Instructions
